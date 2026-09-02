@@ -67,11 +67,11 @@
     white-space:nowrap;
   }
   .company-block{
-    font-size:9.5px;
+    font-size:8.5px;
     color:#4a4a4a;
     line-height:1.5;
-    margin-top:0px;
-    margin-bottom:10px;
+    margin-top:10px;
+    margin-bottom:35px;
   }
 
   .date-line{ font-weight:bold; margin-bottom:14px; }
