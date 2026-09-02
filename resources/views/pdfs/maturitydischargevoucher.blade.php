@@ -37,7 +37,7 @@
     width:200px;
   }
   .logo-cell img{
-    height:130px;
+    height:100px;
     width:auto;
     display:block;
     margin-bottom:10px;
