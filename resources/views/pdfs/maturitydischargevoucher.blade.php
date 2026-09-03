@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Maturity Discharge Voucher Jubilee Life Insurance</title>
+  
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
   @page {
     size: A4;
     margin: 16mm 14mm;
@@ -31,46 +34,69 @@
   }
   table.header-table td:last-child {
   text-align: right;    
-  padding-top: 15px;    
+  padding-top: 0;    
 }
   .logo-cell{
-    width:200px;
+    width:170px;
+    padding-left:0;
+
   }
   .logo-cell img{
-    height:100px;
+    height:150px;
     width:auto;
     display:block;
-    margin-bottom:10px;
+    margin-left: -50px;
+    margin-bottom: 10px;
+    margin-top: -40px;
   }
-  .title-cell{
-    text-align:right;
-    vertical-align:middle;
-  }
-  .title-box{
-    border-top:1px solid #D1193C;
-    border-bottom:3px solid #D1193C;
-    padding:8px 0;
-    display:inline-block;
-  }
-    .title-box h1{
-    margin:0;
-    font-size:19px;
-    font-weight:bold;
-    color:#D1193C;
-    white-space:nowrap;
-  }
-  .title-box h2{
-    margin:2px 0 0 9.8mm;
-    font-size:16px;
-    font-weight:normal;
-    color:#231f20;
-    white-space:nowrap;
-  }
+
+
+/* 1. Ensure the table cell aligns content to the right */
+.title-cell {
+  text-align: right;
+  vertical-align: top;
+}
+
+/* 2. Wrapper pushes the title-box flush right */
+.title-wrapper {
+  display: block;
+  text-align: right;
+}
+
+/* 3. Inline-block shrink-wraps the red borders strictly to the text width */
+.title-box {
+  display: inline-block;
+  border-top: 1.5px solid #C8102E;
+  border-bottom: 3.5px solid #C8102E;
+  padding: 16px 0 20px 0;
+  text-align: right;
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+}
+
+.title-box h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #C8102E;
+  white-space: nowrap;
+  letter-spacing: -0.2px;
+  line-height: 1.1;
+}
+
+.title-box h2 {
+  margin: 2px 0 0 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: #231f20;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+  line-height: 1.1;
+}
   .company-block{
     font-size:8.5px;
     color:#4a4a4a;
     line-height:1.5;
-    margin-top:10px;
+    margin-top:-9px;
     margin-bottom:35px;
   }
 
@@ -201,19 +227,33 @@ table.sig-table td{
     line-height:1.6;
   }
   .important-box li{ margin-bottom:8px; }
+.footer-tagline {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: -14px;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  color: #C8102E;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 20px;
+  background-color: #ffffff;
+}
 
-  .footer{
-    position:fixed;
-    bottom:-8mm;
-    left:0;
-    right:0;
-    text-align:center;
-    font-size:13px;
-    color:#D1193C;
-    padding-bottom:10px;
-  }
-  .footer b{ font-weight:900;
-            }
+    .footer-tagline .text-light {
+      font-weight: 450;
+      letter-spacing: -0.5px;
+    }
+
+    .footer-tagline .text-bold {
+      font-weight: 800;
+    }
 
 
   .page-break{ page-break-before:always; }
@@ -221,19 +261,24 @@ table.sig-table td{
 </head>
 <body>
 
-<div class="footer">PART OF <b>JUBILEE GROUP</b></div>
+<footer class="footer-tagline">
+    <span class="text-light">PART OF</span>
+    <span class="text-bold">JUBILEE GROUP</span>
+  </footer>
 
 <table class="header-table">
   <tr>
     <td class="logo-cell">
       <img src="https://jubileeinsurance.com/ke/wp-content/uploads/2024/11/logolife.png" alt="Jubilee Life Insurance">
     </td>
-    <td class="title-cell">
-      <div class="title-box">
-        <h1>MATURITY DISCHARGE VOUCHER</h1>
-        <h2>FANAKA PLAN TERM LAYER 1</h2>
-      </div>
-    </td>
+   <td class="title-cell">
+  <div class="title-wrapper">
+    <div class="title-box">
+      <h1>MATURITY DISCHARGE VOUCHER</h1>
+      <h2>FANAKA PLAN TERM LAYER 1</h2>
+    </div>
+  </div>
+</td>
   </tr>
 </table>
 
@@ -293,9 +338,11 @@ table.sig-table td{
   <tr class="total"><td class="label">Net Amount Payable (A-B)&nbsp; (Kshs)</td><td class="value">{{ number_format($data->net_amount_payable, 2) }}</td></tr>
 </table>
 
+
 <p class="dotted-line">Dated at ...................................  this......................................  day  of ........................20.......................</p>
 
 <p class="dotted-line">Claimant's name:      ...............................................................................................................................</p>
+
 
 <div class="page-break"></div>
 
