@@ -16,7 +16,7 @@
 
   body{
     margin:0;
-    font-family:'Helvetica', 'Arial', sans-serif;
+    font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
     color:#231f20;
     font-size:13px;
     line-height:1.6;
@@ -68,9 +68,9 @@
   display: inline-block;
   border-top: 1.5px solid #C8102E;
   border-bottom: 3.5px solid #C8102E;
-  padding: 16px 0 20px 0;
+  padding: 16px 0 15px 0;
   text-align: right;
-  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
 }
 
 .title-box h1 {
@@ -154,7 +154,7 @@
     font-weight:bold; 
     margin:4px 0 6px 0; 
     color:#D1193C;
-    margin-bottom:16px;
+    margin-bottom:10px;
  }
 
   table.figures{
@@ -232,18 +232,20 @@ table.sig-table td{
   bottom: 0;
   left: 0;
   width: 100%;
-  margin-bottom: -14px;
+  margin-bottom: -29px;
+  margin-left: -13.5mm;
   font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   color: #C8102E;
   text-transform: uppercase;
   text-align: center;
-  font-size: 11px;
+  font-size: 11.8px;
   letter-spacing: 0;
   display: flex;
   align-items: center;
   gap: 6px;
   padding: 20px;
   background-color: #ffffff;
+  
 }
 
     .footer-tagline .text-light {
@@ -337,11 +339,9 @@ table.sig-table td{
   <tr class="odd red-label"><td class="label">TOTAL OF Kshs.</td><td class="value">{{ number_format($data->total_deductions, 2) }}</td></tr>
   <tr class="total"><td class="label">Net Amount Payable (A-B)&nbsp; (Kshs)</td><td class="value">{{ number_format($data->net_amount_payable, 2) }}</td></tr>
 </table>
-
-
 <p class="dotted-line">Dated at ...................................  this......................................  day  of ........................20.......................</p>
 
-<p class="dotted-line">Claimant's name:      ...............................................................................................................................</p>
+<p class="dotted-line">Claimant's name:           ...............................................................................................................................</p>
 
 
 <div class="page-break"></div>
