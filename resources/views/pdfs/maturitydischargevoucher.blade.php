@@ -63,12 +63,11 @@
   text-align: right;
 }
 
-/* 3. Inline-block shrink-wraps the red borders strictly to the text width */
 .title-box {
   display: inline-block;
   border-top: 1.5px solid #C8102E;
   border-bottom: 3.5px solid #C8102E;
-  padding: 16px 0 15px 0;
+  padding: 16px 0 14px 0;
   text-align: right;
   font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
 }
@@ -165,7 +164,7 @@
     white-space:nowrap;
   }
   table.figures td{
-    border:1px solid black;
+    border:1px solid grey;
     padding:2px 6px;
     height:16px;
     line-height:1;
@@ -208,24 +207,37 @@ table.sig-table td{
 
   .bank-note{ font-weight:bold; margin-bottom:14px; }
 
-  .important-box{
-    background-color:#dfdfdf;
-    border-radius:6px;
-    padding:14px 16px;
-    margin-top:10px;
-  }
-  .important-box h3{
-    margin:0 0 10px 0;
-    color:#BA0C2F;
-    font-style:italic;
-    font-size:12.5px;
-  }
-  .important-box ol{
-    margin:0;
-    padding-left:18px;
-    font-size:10.5px;
-    line-height:1.6;
-  }
+ .important-box {
+    background-color: #dfdfdf;
+    border-radius: 6px;
+    padding: -1px 2.5px 5px 1px;
+    margin-top: 10px;
+}
+
+.important-box h3 {
+    margin: 0 0 8px 0;
+    color: #BA0C2F;
+    font-style: italic;
+    font-size: 12.5px;
+    font-weight: bold;
+}
+
+.important-box ol {
+    margin: 0;
+    padding-left: 17px;
+    list-style-position: outside;
+    font-size: 10.5px;
+    line-height: 1.45;
+}
+
+.important-box li {
+    padding-left: 3px;
+    margin-bottom: 5px;
+}
+
+.important-box li:last-child {
+    margin-bottom: 0;
+}
   .important-box li{ margin-bottom:8px; }
 .footer-tagline {
   position: fixed;
